@@ -1,5 +1,7 @@
 ---
+import '../style/global.css';
 
+const pageTitle = "Home"
 ---
 
 <html lang="en">
@@ -8,12 +10,13 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<a href="/" target="_blank" rel="noopener noreferrer">Home</a>
     <a href="/about" target="_blank" rel="noopener noreferrer">About me</a>
-		<h1>Astro</h1>
-		<h1>Mi sitio Astro</h1>
+		<a href="/blog" target="_blank" rel="noopener noreferrer">Blog</a>
+		<h1>{pageTitle}</h1>
+		<h1>My Astro website</h1>
 	</body>
 </html>
