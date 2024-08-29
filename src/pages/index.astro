@@ -1,22 +1,8 @@
 ---
-import '../style/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = "Home"
+const pageTitle = "Home";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<a href="/" target="_blank" rel="noopener noreferrer">Home</a>
-    <a href="/about" target="_blank" rel="noopener noreferrer">About me</a>
-		<a href="/blog" target="_blank" rel="noopener noreferrer">Blog</a>
-		<h1>{pageTitle}</h1>
-		<h1>My Astro website</h1>
-	</body>
-</html>
+<BaseLayout pageTitle= {pageTitle}>
+  <h1>My awesome blog caption</h1>
+</BaseLayout>

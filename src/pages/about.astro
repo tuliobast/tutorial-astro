@@ -1,4 +1,5 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 import '../style/global.css';
 
 const pageTitle = "About me";
@@ -16,6 +17,7 @@ const goal = 3;
 const skillColor = "navy";
 const fontWeight = "bold";
 const textCase = "uppercase";
+
 ---
 
 <html lang="en">
@@ -26,11 +28,6 @@ const textCase = "uppercase";
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
     <style define:vars={{skillColor, fontWeight, textCase}}>
-      h1 {
-        color: purple;
-        font-size: 4rem;
-      }
-
       .skill {
         color:  var(--skillColor);
         font-weight: var(--fontWeight);
@@ -39,17 +36,14 @@ const textCase = "uppercase";
     </style>
 	</head>
 	<body>
-    <a href="/" target="_blank" rel="noopener noreferrer">Home</a>
-    <a href="/about" target="_blank" rel="noopener noreferrer">About me</a>
-    <a href="/blog/"target="_blank" rel="noopener noreferrer">Blog</a>
-    <h1>{pageTitle}</h1>
-    <h2>... ¡And my new Astro website!</h2>
-  
-    <p>I working on the introductory Astro tutorial. this is second page of my website,
-      ¡And it's the first one I've built myself!</p>
-  
-    <p>This site will be updated as I complete more parts of the tutorial, so be sure 
-      to check back to see how my journey is going!</p>
+    <BaseLayout pageTitle={ pageTitle }>
+      <h2>... ¡And my new Astro website!</h2>
+    
+      <p>I working on the introductory Astro tutorial. this is second page of my website,
+        ¡And it's the first one I've built myself!</p>
+      
+      <p>This site will be updated as I complete more parts of the tutorial, so be sure 
+        to check back to see how my journey is going!</p>
       <p>Here are a few facts about me:</p>
       <ul>
         <li>My name is {identity.firstName}.</li>
@@ -63,9 +57,8 @@ const textCase = "uppercase";
         {skills.map((skill) => <li class="skill">{skill}</li>)}
       </ul> 
       {happy && <p>I am happy to be learning Astro!</p>}
-
       {finished && <p>I finished this tutorial!</p>}
-
       {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+    </BaseLayout>  
   </body>
 </html>
