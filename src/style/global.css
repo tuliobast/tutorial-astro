@@ -8,6 +8,21 @@ html.dark {
   color: #fff;
 }
 
+.dark li a  {
+  color: #dfb600;
+  text-decoration: none;
+}
+
+li {  
+  list-style: none;
+} 
+
+li a{
+  color: #150ad6;
+  text-decoration: none;
+  list-style: none;
+}
+
 html {
   background-color: #f1f5f9;
   font-family: sans-serif;
