@@ -1,14 +1,13 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: My Fourth Blog Post
+title: My fourth blog post
+pubDate: 2024-15-02
+description: "This is the fourth post on my new Astro blog."
 author: Astro Learner
-description: "This post will show up on its own!"
 image:
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "The word astro against an illustration of planets and stars."
-pubDate: 2022-08-08
-tag: ["Astro", "Blogging", "successes"]
+  url: "https://docs.astro.build/assets/full-logo-dark.png"
+  alt: "The full Astro logo."
+tags: ["astro", "blogging", "public learning"]
 ---
 
-This post should show up with my other blog posts, because `Astro.glob()` is returning a list of all my posts in order to create my list.
-
+This post should appear with my other blog posts, because `Astro.glob()` is returning a list of all my posts to create my list.
